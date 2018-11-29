@@ -20,7 +20,17 @@ node {
   }
   stage('Test') {
     echo "Comienza las pruebas"
+      withMaven(
+        maven:'Maven por defecto(3.6)'
+    ){
+      sh 'mvn test'
+    }
   }
   stage('Empaquetar') {
     echo "Comienza la empaqueta"  }
+    withMaven(
+        maven:'Maven por defecto(3.6)'
+    ){
+      sh 'mvn package'
+    }
 }
