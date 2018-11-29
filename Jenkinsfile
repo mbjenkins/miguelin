@@ -9,7 +9,12 @@
   }
 }*/
 node {
-  stage('Build') {
-    echo "Adios Mundo"
+  stage('Compilar') {
+    echo "Comienza la compilación"
   }
+  stage('Test') {
+    echo "Comienza las pruebas"
+  }
+  stage('Empaquetar') {
+    echo "Comienza la empaqueta"  }
 }
