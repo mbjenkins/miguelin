@@ -12,7 +12,11 @@ node {
   checkout scm
   stage('Compilar') {
     echo "Comienza la compilación"
-    mvn compile
+    withMaven(
+        maven:'Maven por defecto(3.6)'
+    ){
+      sh 'mvn compile'
+    }
   }
   stage('Test') {
     echo "Comienza las pruebas"
