@@ -1,7 +1,10 @@
-pipeline {
+pipeline 
+{
   agent any
-  stages {
-    stage('Compilar') {
+  stages 
+  {
+    stage('Compilar') 
+    {
       steps {
         echo "Comienza la compilación"
         withMaven(
@@ -31,23 +34,27 @@ pipeline {
         }        
       }
     }
-post {
-    
-    allways {
+    post 
+    {    
+      allways 
+      {
       
-      deleteDir()
-    }
-    failure {
+        deleteDir()
+      }
+      failure 
+      {
       
-      echo "UPS!!"
-    }
-    success {
+        echo 'UPS!!'
+      }
+      success 
+      {
       
-      echo 'Exito'
-    }
-    changed {
-      echo 'cmabio' 
+        echo 'Exito'
+      }
+      changed 
+      {
+        echo 'cmabio' 
+      }
     }    
   }
-  
 }
