@@ -62,7 +62,7 @@ post
 node {
     try {
         stage('Test') {
-            sh 'echo "OK!"; exit 0
+            sh 'echo "OK!"; exit 0'
         }
         echo 'Se ejecuta si exito'
     } catch (e) {
