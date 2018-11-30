@@ -31,5 +31,23 @@ pipeline {
         }        
       }
     }
+post {
+    
+    allways {
+      
+      deleteDir()
+    }
+    failure {
+      
+      echo "UPS!!"
+    }
+    success {
+      
+      echo 'Exito'
+    }
+    changed {
+      echo 'cmabio' 
+    }    
   }
+  
 }
