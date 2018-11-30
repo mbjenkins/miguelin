@@ -7,7 +7,7 @@ pipeline {
         withMaven(
             maven:'Maven por defecto(3.6)'
         ){
-        mvn compile
+        sh 'mvn compile'
         }        
       }
     }
