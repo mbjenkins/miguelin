@@ -24,6 +24,7 @@ node {
 //        maven:'Maven por defecto(3.6)'
 //    ){
       sh 'mvn test'
+    junit 'reports/**/*.xml' 
 //    }
   }
   stage('Empaquetar') {
