@@ -34,7 +34,9 @@ pipeline
         }        
       }
     }
-    post 
+        
+  }
+post 
     {    
       allways 
       {
@@ -55,6 +57,5 @@ pipeline
       {
         echo 'cmabio' 
       }
-    }    
-  }
+    }  
 }
